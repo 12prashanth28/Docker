@@ -1,0 +1,31 @@
+yum update -y
+vi docker.sh
+sh docker.sh
+docker --version
+docker pull amazonlinux
+docker run -it -d amazonlinux
+docker ps
+docker images
+docker exec -it c6c88e300a31 /bin/bash
+--------------inside bash 5.4----------------
+yum update -y
+yum install wget -y
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.86/bin/apache-tomcat-9.0.86.tar.gz
+yum install tar -y
+yum install gzip -y
+tar -zxvf apache-tomcat-9.0.86.tar.gz
+ls
+cd apache-tomcat-9.0.86
+ls
+cd bin
+ls
+yum install java-11* -y
+java --version
+ls
+sh startup.sh
+exit
+-------------inside root user-------------
+docker rm -f c6c88e300a31
+docker rmi amazonlinux
+docker images
+docker ps
