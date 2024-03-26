@@ -1,0 +1,15 @@
+ yum update -y
+--------------------------------------
+ vi docker.sh
+ sh docker.sh
+ docker --version
+-------------------------------------
+ docker pull nginx
+ docker images
+ docker run -it -d -p 8000:80 nginx [port number : 8000:80]
+ docker ps
+ docker images
+ docker rm -f a4cfc92cd386 [container ID]
+ docker rmi nginx
+ docker ps
+ docker images
