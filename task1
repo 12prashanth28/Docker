@@ -1,0 +1,16 @@
+sudo yum update -y
+-------------------------------------
+vi docker.sh
+sh docker.sh
+docker --version
+-------------------------------------
+docker pull httpd
+docker images
+docker run -it -d httpd
+docker ps
+docker ps -a
+docker rm -f 4c209466877f [container ID]
+docker rmi httpd
+docker images
+docker ps -a
+docker ps
