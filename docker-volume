@@ -1,0 +1,41 @@
+yum update -y
+vi docker.sh
+sh docker.sh
+docker pull httpd
+docker run -it -d httpd
+docker ps
+docker images
+docker exec -it bce722cea03b /bin/bash
+-----------inside apache2------------
+ls
+pwd
+cd htdocs
+cat index.html
+exit
+------------inside root user-----------
+docker volume ls
+docker volume demo
+docker volume create demo
+docker volume ls
+docker volume inspect demo
+cd /var/lib/docker/volumes
+ls
+cd demo/
+ls
+docker images
+docker volume ls
+docker run -it -d -v /var/lib/docker/volumes/demo/_data httpd
+docker ps
+docker exec -it dae383c79421 /bin/bash
+------------inside apache2-----------
+ls
+cd htdocs
+cat index.html
+exit
+------------inside root user------------
+cd /var/lib/docker/volumes
+ls
+cd demo
+ls
+cd _data/
+ls
